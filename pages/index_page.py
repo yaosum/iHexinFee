@@ -11,6 +11,7 @@ class IndexPage(PageObject):
     sum_button = page_element(xpath = "//UIAApplication[1]/UIAWindow[2]/UIAButton[1]")
     sum_result_label = page_element(accessibility_id = "Answer")
 
+
     def caculate_sum(self, a, b):
         self.first_arg_textfield = a
         self.second_arg_textfield = b
