@@ -1,0 +1,11 @@
+.cache
+
+report.html
+
+*.pyc
+
+test.log
+
+report.xml
+
+.idea
