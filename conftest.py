@@ -65,7 +65,7 @@ def app_path(request):
     return request.config.getoption('app_path')
 
 
-@pytest.fixture(scope = 'session')
+@pytest.fixture(scope = 'function')
 def driver(request, platform_name, platform_version, device_name, device_udid, bundle_id, app_path):
     # equals to setUp
     desired_caps = {}

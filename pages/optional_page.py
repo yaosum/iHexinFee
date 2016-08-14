@@ -11,3 +11,6 @@ class OptionalPage(PageObject):
 	zixuan_staticText = page_element(xpath = Zixuan_staticText)
 	sousuo_button = page_element(accessibility_id = "搜索")
 
+	hu_staticText = page_element(xpath= "//UIAApplication[1]/UIAWindow[1]/UIAStaticText[7]")
+	
+

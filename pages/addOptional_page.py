@@ -4,5 +4,10 @@ from ..appium_page_objects import PageObject, page_element
 
 
 class AddOptionalPage(PageObject):
-	tianjiazixuan_staticText = page_element(accessibility_id = "添加自选")
+	fanhui_button = page_element(accessibility_id = '返回')
+	tianjiazixuan_staticText = page_element(xpath= '//UIAApplication[1]/UIAWindow[1]/UIANavigationBar[1]/UIAStaticText[1]')
+
+	zixuanadd_button = page_element(accessibility_id = 'zixuan add')
+
+	qingchuwenben_button = page_element(accessibility_id = '清除文本')
 

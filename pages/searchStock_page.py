@@ -5,6 +5,9 @@ from selenium.common.exceptions import NoSuchElementException
 from ..appium_page_objects import PageObject, page_element
 
 class SearchStockPage(PageObject):
+
+	qingchuwenben_button = page_element(accessibility_id = "清除文本")
+
 	Keyboard_Digits_Indicator = page_element(accessibility_id = "字母键盘_numAltButton")
 	Keyboard_Letter_Indicator = page_element(accessibility_id = "数字键盘_altButton")
 	Search_Stock_Keyboard_Tuple = (Keyboard_Digits_Indicator, Keyboard_Letter_Indicator,)
