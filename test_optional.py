@@ -49,7 +49,7 @@ def test_step005(driver):
 	searchStock_page.hx_send_keys_with_addStock('2', '0', '0', '0', '1', '1')
 	searchStock_page.hx_send_keys_with_addStock('0', '1', '0', '1', '0', '7')
 	searchStock_page.hx_send_keys_with_addStock('1', '0', '0', '2', '1', '3')
-	searchStock_page.hx_send_keys_with_addStock('5', '0', '0', '0', '3', '8')
+	searchStock_page.hx_send_keys_with_addStock('5', '0', '0', '0', '5', '8')
 	searchStock_page.hx_send_keys_with_addStock('1', '5', '0', '0', '0', '8')
 	searchStock_page.hx_send_keys_with_addStock('4', '0', '0', '0', '0', '2')
 	searchStock_page.hx_send_keys_with_addStock('3', '9', '9', '0', '0', '1')
@@ -62,8 +62,8 @@ def test_step005(driver):
 	searchStock_page.hx_send_keys_with_addStock('h', 's', 'i')
 
 	addOpyional_page.fanhui_button.click()
-	assert editOptional_page.PFYH_button
-	assert editOptional_page.PAYH_button
+	#assert editOptional_page.PFYH_button
+	#assert editOptional_page.PAYH_button
 
 	editOptional_page.fanhui_button.click()
 
