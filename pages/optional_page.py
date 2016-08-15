@@ -12,5 +12,10 @@ class OptionalPage(PageObject):
 	sousuo_button = page_element(accessibility_id = "搜索")
 
 	hu_staticText = page_element(xpath= "//UIAApplication[1]/UIAWindow[1]/UIAStaticText[7]")
-	
+	zijin_btn = page_element(accessibility_id = '资金')
+	xinwen_btn = page_element(accessibility_id = '新闻')
+	gonggao_btn = page_element(accessibility_id='公告')
+	zichan_btn = page_element(accessibility_id='资产')
+
+
 

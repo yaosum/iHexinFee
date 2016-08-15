@@ -6,3 +6,5 @@ class HuShenChuangPage(PageObject):
 	hu_btn = page_element(accessibility_id = "btn hu")
 	shen_btn = page_element(accessibility_id = "btn shen")
 	chuang_btn = page_element(accessibility_id = "btn chuang")
+
+	fenshitu_scr = page_element(xpath= "//UIAApplication[1]/UIAWindow[1]/UIAScrollView[1]")
