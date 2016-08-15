@@ -2,10 +2,12 @@
 # -*- coding: utf-8 -*-
 
 from selenium.common.exceptions import NoSuchElementException
-from ..appium_page_objects import PageObject, page_element
+
+from page_object.appium_page_objects import PageObject, page_element
+
 
 class SearchStockPage(PageObject):
-
+	zixuanadd_button = page_element(xpath='//UIAApplication[1]/UIAWindow[1]/UIATableView[1]/UIATableCell[1]/UIAButton[1]')
 	qingchuwenben_button = page_element(accessibility_id = "清除文本")
 
 	Keyboard_Digits_Indicator = page_element(accessibility_id = "字母键盘_numAltButton")
@@ -125,6 +127,16 @@ class SearchStockPage(PageObject):
 			if not is_number and is_number_keyboard:
 				self.hx_tap_element(element)
 				self.hx_tap_element_name_sequence(taken_args)
+
+	def hx_send_keys_with_addStock(self, *args):
+		self.hx_send_keys(*args)
+		try:
+			self.zixuanadd_button.click()
+		except:
+			print '该股票已添加过'
+			pass
+		self.qingchuwenben_button.click()
+
 
 
 

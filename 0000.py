@@ -1,16 +1,25 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 from appium import webdriver
+
+from pages.addOptional_page import AddOptionalPage
+from pages.editOptional_page import EditOptionalPage
+from pages.optional_page import OptionalPage
+from pages.public_page import PublicPage
 from pages.searchStock_page import SearchStockPage
 from pages.home_page import HomePage
 from time import sleep
 
 def test_search(driver):
 
-	HomePage(driver).sousuo_button.click()
+	PublicPage(driver).zixuan_button.click()
+	OptionalPage(driver).bianji_button.click()
+	EditOptionalPage(driver).tianjiagupiao_button.click()
 	sleep(1)
-	SearchStockPage(driver).hx_send_keys('123')
-	sleep(1)
+	#SearchStockPage(driver).hx_send_keys('6','0','0','0','0','0')
+	#AddOptionalPage(driver).zixuanadd_button.click()
+	SearchStockPage(driver).hx_send_keys_with_addStock('6', '0', '0', '0', '0', '0')
+	pass
 
 
 

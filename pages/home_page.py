@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-from ..appium_page_objects import PageObject, page_element
+from page_object.appium_page_objects import PageObject, page_element
 
 class HomePage(PageObject):
 	# navigation bar

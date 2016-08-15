@@ -17,7 +17,7 @@ from pages.zixuangugonggao_page import ZixuangugonggaoPage
 from pages.zixuanguxinwen_page import ZixuanguxinwenPage
 from pages.zixun_page import ZixunPage
 
-
+"""
 def test_step001(driver):
 	home_page = HomePage(driver)
 	optional_page = OptionalPage(driver)
@@ -31,8 +31,8 @@ def test_step001(driver):
 	assert editOptional_page.bianjizixuan_StaticText.text == u'编辑自选'
 	editOptional_page.tianjiagupiao_button.click()
 	assert addOptional_page.tianjiazixuan_staticText.text == u'添加自选'
-
 """
+
 def test_step005(driver):
 	public_page = PublicPage(driver)
 	addOpyional_page = AddOptionalPage(driver)
@@ -43,81 +43,33 @@ def test_step005(driver):
 	editOptional_page.tianjiagupiao_button.click()
 	searchStock_page = SearchStockPage(driver)
 	sleep(1)
-	searchStock_page.hx_send_keys('6','0','0','0','0','0')
-	addOpyional_page.zixuanadd_button.click()
-	addOpyional_page.qingchuwenben_button.click()
+	searchStock_page.hx_send_keys_with_addStock('6', '0', '0', '0', '0', '0')
+	searchStock_page.hx_send_keys_with_addStock('0', '0', '0', '0', '0', '1')
+	searchStock_page.hx_send_keys_with_addStock('9', '0', '0', '9', '0', '1')
+	searchStock_page.hx_send_keys_with_addStock('2', '0', '0', '0', '1', '1')
+	searchStock_page.hx_send_keys_with_addStock('0', '1', '0', '1', '0', '7')
+	searchStock_page.hx_send_keys_with_addStock('1', '0', '0', '2', '1', '3')
+	searchStock_page.hx_send_keys_with_addStock('5', '0', '0', '0', '3', '8')
+	searchStock_page.hx_send_keys_with_addStock('1', '5', '0', '0', '0', '8')
+	searchStock_page.hx_send_keys_with_addStock('4', '0', '0', '0', '0', '2')
+	searchStock_page.hx_send_keys_with_addStock('3', '9', '9', '0', '0', '1')
+	searchStock_page.hx_send_keys_with_addStock('d', 'j', 'i')
+	searchStock_page.hx_send_keys_with_addStock('B', 'I', 'D', 'U')
+	searchStock_page.hx_send_keys_with_addStock('5', '1', '0', '0', '5', '0')
+	searchStock_page.hx_send_keys_with_addStock('T', 'J', 'A', 'G', '0', '0')
 
-	searchStock_page.hx_send_keys('0', '0', '0', '0', '0', '1')
-	addOpyional_page.zixuanadd_button.click()
-	addOpyional_page.qingchuwenben_button.click()
-
-	searchStock_page.hx_send_keys('9', '0', '0', '9', '0', '1')
-	addOpyional_page.zixuanadd_button.click()
-	addOpyional_page.qingchuwenben_button.click()
-
-	searchStock_page.hx_send_keys('2', '0', '0', '0', '1', '1')
-	addOpyional_page.zixuanadd_button.click()
-	addOpyional_page.qingchuwenben_button.click()
-
-	searchStock_page.hx_send_keys('0', '1', '0', '1', '0', '7')
-	addOpyional_page.zixuanadd_button.click()
-	addOpyional_page.qingchuwenben_button.click()
-
-	searchStock_page.hx_send_keys('1', '0', '0', '2', '1', '3')
-	addOpyional_page.zixuanadd_button.click()
-	addOpyional_page.qingchuwenben_button.click()
-
-	searchStock_page.hx_send_keys('5', '0', '0', '0', '3', '8')
-	addOpyional_page.zixuanadd_button.click()
-	addOpyional_page.qingchuwenben_button.click()
-
-	searchStock_page.hx_send_keys('1', '5', '0', '0', '0', '8')
-	addOpyional_page.zixuanadd_button.click()
-	addOpyional_page.qingchuwenben_button.click()
-
-	searchStock_page.hx_send_keys('4', '0', '0', '0', '0', '2')
-	addOpyional_page.zixuanadd_button.click()
-	addOpyional_page.qingchuwenben_button.click()
-
-	searchStock_page.hx_send_keys('3', '9', '9', '0', '0', '1')
-	addOpyional_page.zixuanadd_button.click()
-	addOpyional_page.qingchuwenben_button.click()
-
-	searchStock_page.hx_send_keys('d', 'j', 'i')
-	addOpyional_page.zixuanadd_button.click()
-	addOpyional_page.qingchuwenben_button.click()
-
-	searchStock_page.hx_send_keys('B', 'I', 'D', 'U')
-	addOpyional_page.zixuanadd_button.click()
-	addOpyional_page.qingchuwenben_button.click()
-
-	searchStock_page.hx_send_keys('5', '1', '0', '0', '5', '0')
-	addOpyional_page.zixuanadd_button.click()
-	addOpyional_page.qingchuwenben_button.click()
-
-	searchStock_page.hx_send_keys('T', 'J', 'A', 'G', '0', '0')
-	addOpyional_page.zixuanadd_button.click()
-	addOpyional_page.qingchuwenben_button.click()
-
-
-	searchStock_page.hx_send_keys('0', '0', '0', '0', '1')
-	sleep(1)
-	addOpyional_page.zixuanadd_button.click()
-	addOpyional_page.qingchuwenben_button.click()
-	searchStock_page.hx_send_keys('h', 's', 'i')
-	sleep(1)
-	addOpyional_page.zixuanadd_button.click()
+	searchStock_page.hx_send_keys_with_addStock('0', '0', '0', '0', '1')
+	searchStock_page.hx_send_keys_with_addStock('h', 's', 'i')
 
 	addOpyional_page.fanhui_button.click()
 	assert editOptional_page.PFYH_button
 	assert editOptional_page.PAYH_button
-	#assert editOptional_page.YSBG_button
 
 	editOptional_page.fanhui_button.click()
 
 	public_page.shouye_button.click()
 	public_page.zixuan_button.click()
-"""
+
 
 """
 def test_step20(driver):

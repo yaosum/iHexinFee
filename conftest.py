@@ -1,12 +1,16 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-import sys
-import logging
-import os
+
 
 from appium import webdriver
 import pytest
 
+import sys
+import logging
+import os
+
+ROOT_PATH = os.path.split(os.path.realpath(__file__))[0]
+sys.path.append(ROOT_PATH)
 
 PY3 = sys.version_info[0] == 3
 framework_dir = os.path.join(os.path.abspath(__file__), "..")
