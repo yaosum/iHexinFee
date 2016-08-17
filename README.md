@@ -80,6 +80,10 @@ def scroll(self, origin_el, destination_el):
         action.press(origin_el).move_to(destination_el).release().perform()
         return self
 ```
+xpath查找元素的问题
+```
+self.driver.find_element_by_xpath("//UIAStaticText[@name='同花顺']").click()
+```
 
 ### 命名规则
 1. 页面:对于有一个新page生成需创建一个新page,优先使用标题栏命名,若标题会改变则根据页面功能进行命名

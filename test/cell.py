@@ -31,9 +31,9 @@ class TestOptional(unittest.TestCase):
 
     def test_001(self):
 		self.driver.find_element_by_accessibility_id("自选").click()
-		el1 = self.driver.find_element_by_xpath("//UIAApplication[1]/UIAWindow[1]/UIATableView[1]/UIATableCell[1]")
-		el17 = self.driver.find_element_by_xpath("//UIAApplication[1]/UIAWindow[1]/UIATableView[1]/UIATableCell[17]")
-		self.driver.scroll(el1, el17)
+		print self.driver.find_element_by_xpath("//UIAStaticText[@name='沪']").is_displayed()
+		sleep(2)
+
 
 		sleep(2)
 if __name__ == '__main__':
