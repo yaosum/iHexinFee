@@ -40,10 +40,14 @@ def test_step005(driver):
 	optional_page = OptionalPage(driver)
 	addOpyional_page = AddOptionalPage(driver)
 	editOptional_page = EditOptionalPage(driver)
+	searchStock_page = SearchStockPage(driver)
+	fenshikxian_page = FenshiKxianPage(driver)
+
 	public_page.zixuan_button.click()
+
 	optional_page.bianji_button.click()
 	editOptional_page.tianjiagupiao_button.click()
-	searchStock_page = SearchStockPage(driver)
+
 	sleep(1)
 
 	searchStock_page.hx_send_keys_with_addStock('6', '0', '0', '0', '0', '0')
@@ -65,8 +69,8 @@ def test_step005(driver):
 	searchStock_page.hx_send_keys_with_addStock('h', 's', 'i')
 
 	addOpyional_page.fanhui_button.click()
-	sleep(2)
-	assert editOptional_page.cell001_staText.text == u'现货白银'
+	driver.swipe(start_x=285, start_y=108, end_x=285, end_y=550, duration=500)
+	#assert editOptional_page.cell001_staText.text == u'现货白银'
 	editOptional_page.fanhui_button.click()
 	sleep(1)
 	print optional_page.cell001.text
@@ -80,6 +84,7 @@ def test_step005(driver):
 	editOptional_page.cell017_zhiding_btn.click()
 	editOptional_page.cell017_zhiding_btn.click()
 	# 第一条为上证指数
+	driver.swipe(start_x=285, start_y=108, end_x=285, end_y=550, duration=500)
 	assert editOptional_page.cell001_staText.text == u'上证指数'
 	editOptional_page.fanhui_button.click()
 	#
@@ -102,19 +107,166 @@ def test_step005(driver):
 	editOptional_page.fanhui_button.click()
 	sleep(2)
 
+	optional_page.sousuo_button.click()
+	searchStock_page.hx_send_keys('1','A','0','0','0','1')
+	SearchStockPage.zixuanadd_button.click()
+	searchStock_page.qingchuwenben_button.click()
+	searchStock_page.hx_send_keys('3','9','9','0','0','6')
+	fenshikxian_page.jiazixuan_staText.click()
+	fenshikxian_page.fanhui_button.click()
+	optional_page.sousuo_button.click()
+	searchStock_page.hx_send_keys('3', '0', '0', '0', '3', '3')
+	fenshikxian_page.jiazixuan_staText.click()
+	fenshikxian_page.fanhui_button.click()
+
+	# step89
+	# 上滑
+	optional_page.hx_upglide()
+	optional_page.hx_upglide()
+	optional_page.hx_glide()
+	optional_page.hx_glide()
+	optional_page.hx_glide()
+	# 左滑
+	optional_page.hx_right()
+	optional_page.hx_right()
+	optional_page.hx_right()
+	optional_page.hx_right()
+	optional_page.hx_right()
+	optional_page.hx_right()
+	optional_page.hx_right()
+	optional_page.hx_right()
+
+	optional_page.hx_left()
+	optional_page.hx_left()
+	optional_page.hx_left()
+	optional_page.hx_left()
+	optional_page.hx_left()
+	optional_page.hx_left()
+	optional_page.hx_left()
+	optional_page.hx_left()
+	optional_page.hx_left()
+	optional_page.hx_left()
+
+	optional_page.zuixin_staText.click()
+	optional_page.zuixin_staText.click()
+	optional_page.quxiaopaixu_btn.click()
+
+
+	# 待添加
+
+
+	optional_page.zhenfu_staText.click()
+	optional_page.zhenfu_staText.click()
+	optional_page.quxiaopaixu_btn.click()
+
+	optional_page.zhangfu_staText.click()
+	optional_page.zhangfu_staText.click()
+	optional_page.quxiaopaixu_btn.click()
+
+	optional_page.zuixin_staText.click()
+	optional_page.zuixin_staText.click()
+	optional_page.quxiaopaixu_btn.click()
+
+	optional_page.cell001.click()
+	sleep(1)
+	fenshikxian_page.xiayigegupiao_button.click
+	fenshikxian_page.xiayigegupiao_button.click
+	fenshikxian_page.xiayigegupiao_button.click
+	fenshikxian_page.xiayigegupiao_button.click
+	fenshikxian_page.xiayigegupiao_button.click
+	fenshikxian_page.xiayigegupiao_button.click
+	fenshikxian_page.xiayigegupiao_button.click
+	fenshikxian_page.xiayigegupiao_button.click
+	fenshikxian_page.xiayigegupiao_button.click
+	fenshikxian_page.xiayigegupiao_button.click
+	fenshikxian_page.xiayigegupiao_button.click
+	fenshikxian_page.xiayigegupiao_button.click
+	fenshikxian_page.xiayigegupiao_button.click
+	fenshikxian_page.xiayigegupiao_button.click
+	fenshikxian_page.xiayigegupiao_button.click
+	fenshikxian_page.xiayigegupiao_button.click
+	fenshikxian_page.xiayigegupiao_button.click
+
+	fenshikxian_page.shangyigegupiao_button.click()
+	fenshikxian_page.shangyigegupiao_button.click()
+	fenshikxian_page.shangyigegupiao_button.click()
+	fenshikxian_page.shangyigegupiao_button.click()
+	fenshikxian_page.shangyigegupiao_button.click()
+	fenshikxian_page.shangyigegupiao_button.click()
+	fenshikxian_page.shangyigegupiao_button.click()
+	fenshikxian_page.shangyigegupiao_button.click()
+	fenshikxian_page.shangyigegupiao_button.click()
+	fenshikxian_page.shangyigegupiao_button.click()
+	fenshikxian_page.shangyigegupiao_button.click()
+	fenshikxian_page.shangyigegupiao_button.click()
+	fenshikxian_page.shangyigegupiao_button.click()
+	fenshikxian_page.shangyigegupiao_button.click()
+	fenshikxian_page.shangyigegupiao_button.click()
+	fenshikxian_page.shangyigegupiao_button.click()
+	fenshikxian_page.shangyigegupiao_button.click()
+
+	fenshikxian_page.hx_left()
+
+	fenshikxian_page.xiayigegupiao_button.click
+	fenshikxian_page.xiayigegupiao_button.click
+	fenshikxian_page.xiayigegupiao_button.click
+	fenshikxian_page.xiayigegupiao_button.click
+	fenshikxian_page.xiayigegupiao_button.click
+	fenshikxian_page.xiayigegupiao_button.click
+	fenshikxian_page.xiayigegupiao_button.click
+	fenshikxian_page.xiayigegupiao_button.click
+	fenshikxian_page.xiayigegupiao_button.click
+	fenshikxian_page.xiayigegupiao_button.click
+	fenshikxian_page.xiayigegupiao_button.click
+	fenshikxian_page.xiayigegupiao_button.click
+	fenshikxian_page.xiayigegupiao_button.click
+	fenshikxian_page.xiayigegupiao_button.click
+	fenshikxian_page.xiayigegupiao_button.click
+	fenshikxian_page.xiayigegupiao_button.click
+	fenshikxian_page.xiayigegupiao_button.click
+
+	fenshikxian_page.shangyigegupiao_button.click()
+	fenshikxian_page.shangyigegupiao_button.click()
+	fenshikxian_page.shangyigegupiao_button.click()
+	fenshikxian_page.shangyigegupiao_button.click()
+	fenshikxian_page.shangyigegupiao_button.click()
+	fenshikxian_page.shangyigegupiao_button.click()
+	fenshikxian_page.shangyigegupiao_button.click()
+	fenshikxian_page.shangyigegupiao_button.click()
+	fenshikxian_page.shangyigegupiao_button.click()
+	fenshikxian_page.shangyigegupiao_button.click()
+	fenshikxian_page.shangyigegupiao_button.click()
+	fenshikxian_page.shangyigegupiao_button.click()
+	fenshikxian_page.shangyigegupiao_button.click()
+	fenshikxian_page.shangyigegupiao_button.click()
+	fenshikxian_page.shangyigegupiao_button.click()
+	fenshikxian_page.shangyigegupiao_button.click()
+	fenshikxian_page.shangyigegupiao_button.click()
+
+	fenshikxian_page.fanhui_button.click()
+
+	optional_page.zuixin_staText.click()
+	optional_page.hx_longPress(optional_page.cell001)
+	optional_page.zhidi_btn.click()
+	# 待扩展
+	optional_page.quxiaopaixu_btn.click()
+	optional_page.zuixin_staText.click()
+	optional_page.hx_upglide()
+	optional_page.hx_longPress(optional_page.cell017)
+	optional_page.zhiding_btn.click()
+	optional_page.quxiaopaixu_btn.click()
+	optional_page.hx_glide().click()
+	optional_page.hx_longPress(optional_page.cell001)
+	optional_page.shanchu_btn.click()
+	optional_page.hx_longPress(optional_page.cell001)
+	optional_page.shanchu_btn.click()
+
+
+
+
 
 
 """
-def test_step20(driver):
-
-
-	public_page.zixuan_button.click()
-	optional_page.sousuo_button.click()
-	sleep(1)
-	searchStock_page.hx_send_keys('1','A','0','0','0','1')
-	searchStock_page.qingchuwenben_button.click()
-	searchStock_page.hx_send_keys('3', '9', '9', '0', '0', '6')
-
 def test_step031(driver):
 	public_page = PublicPage(driver)
 	optional_page = OptionalPage(driver)

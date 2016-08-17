@@ -11,14 +11,13 @@ from pages.home_page import HomePage
 from time import sleep
 
 def test_search(driver):
-
+	optional_page = OptionalPage(driver)
 	PublicPage(driver).zixuan_button.click()
-	OptionalPage(driver).bianji_button.click()
-	EditOptionalPage(driver).tianjiagupiao_button.click()
-	sleep(1)
-	#SearchStockPage(driver).hx_send_keys('6','0','0','0','0','0')
-	#AddOptionalPage(driver).zixuanadd_button.click()
-	SearchStockPage(driver).hx_send_keys_with_addStock('6', '0', '0', '0', '0', '0')
+
+	optional_page.cell017.click()
+	optional_page.zhenfu_staText.click()
+	#optional_page.hx_longPress(optional_page.cell017)
+
 	pass
 
 

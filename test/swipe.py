@@ -1,7 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-
-
+__author__ = "Hemin Won"
 
 import os
 import unittest
@@ -28,14 +27,14 @@ class TestOptional(unittest.TestCase):
     def tearDown(self):
         self.driver.quit()
 
-
-    def test_001(self):
+    def test_000(self):
 		self.driver.find_element_by_accessibility_id("自选").click()
-		el1 = self.driver.find_element_by_xpath("//UIAApplication[1]/UIAWindow[1]/UIATableView[1]/UIATableCell[1]")
-		el17 = self.driver.find_element_by_xpath("//UIAApplication[1]/UIAWindow[1]/UIATableView[1]/UIATableCell[17]")
-		self.driver.scroll(el1, el17)
+		self.driver.get_window_size()
+		print self.driver.get_window_size()
+		print self.driver.get_window_size().get('width')
+		pass
 
-		sleep(2)
+
 if __name__ == '__main__':
     suite = unittest.TestLoader().loadTestsFromTestCase(TestOptional)
     unittest.TextTestRunner(verbosity=2).run(suite)
