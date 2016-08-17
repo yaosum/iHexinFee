@@ -17,5 +17,9 @@ class OptionalPage(PageObject):
 	gonggao_btn = page_element(accessibility_id='公告')
 	zichan_btn = page_element(accessibility_id='资产')
 
+	cell001 = page_element(xpath='//UIAApplication[1]/UIAWindow[1]/UIATableView[1]/UIATableCell[1]')
+
+	cell001_staText = page_element(xpath='//UIAApplication[1]/UIAWindow[1]/UIATableView[1]/UIATableCell[1]/UIAStaticText[1]')
+
 
 

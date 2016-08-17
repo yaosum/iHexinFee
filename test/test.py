@@ -41,7 +41,8 @@ class TestOptional(unittest.TestCase):
 		self.driver.switch_to.context(webview)
 		print self.driver.current_context
 		print self.driver.page_source
-		self.driver.get("http://notice.10jqka.com.cn/api/pdf/6cb255a23e8383f5.pdf")
+		#self.driver.get("http://www.baidu.com")
+		#self.driver.get("http://notice.10jqka.com.cn/api/pdf/6cb255a23e8383f5.pdf")
 		#self.driver.find_element_by_link_text("查看原文").click()
 		#self.driver.find_element_by_accessibility_id("查看原文").click()
 		#self.driver.find_element_by_xpath("//UIAApplication[1]/UIAWindow[1]/UIAScrollView[1]/UIAWebView[1]/UIAStaticText[3]").click()

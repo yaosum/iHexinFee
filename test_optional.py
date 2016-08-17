@@ -2,6 +2,8 @@
 # -*- coding: utf-8 -*-
 from time import sleep
 
+from appium.webdriver.common.touch_action import TouchAction
+
 from pages.addOptional_page import AddOptionalPage
 from pages.denglu_page import DengluPage
 from pages.editOptional_page import EditOptionalPage
@@ -35,14 +37,15 @@ def test_step001(driver):
 
 def test_step005(driver):
 	public_page = PublicPage(driver)
+	optional_page = OptionalPage(driver)
 	addOpyional_page = AddOptionalPage(driver)
-
-	public_page.zixuan_button.click()
-	OptionalPage(driver).bianji_button.click()
 	editOptional_page = EditOptionalPage(driver)
+	public_page.zixuan_button.click()
+	optional_page.bianji_button.click()
 	editOptional_page.tianjiagupiao_button.click()
 	searchStock_page = SearchStockPage(driver)
 	sleep(1)
+
 	searchStock_page.hx_send_keys_with_addStock('6', '0', '0', '0', '0', '0')
 	searchStock_page.hx_send_keys_with_addStock('0', '0', '0', '0', '0', '1')
 	searchStock_page.hx_send_keys_with_addStock('9', '0', '0', '9', '0', '1')
@@ -62,13 +65,43 @@ def test_step005(driver):
 	searchStock_page.hx_send_keys_with_addStock('h', 's', 'i')
 
 	addOpyional_page.fanhui_button.click()
-	#assert editOptional_page.PFYH_button
-	#assert editOptional_page.PAYH_button
-
+	sleep(2)
+	assert editOptional_page.cell001_staText.text == u'现货白银'
 	editOptional_page.fanhui_button.click()
-
+	sleep(1)
+	print optional_page.cell001.text
+	#assert optional_page.cell001_staText.text == u'现货白银'
 	public_page.shouye_button.click()
 	public_page.zixuan_button.click()
+	optional_page.bianji_button.click()
+	driver.swipe(start_x=285, start_y=548, end_x=285, end_y=117, duration=500)
+	#置顶三次操作
+	editOptional_page.cell017_zhiding_btn.click()
+	editOptional_page.cell017_zhiding_btn.click()
+	editOptional_page.cell017_zhiding_btn.click()
+	# 第一条为上证指数
+	assert editOptional_page.cell001_staText.text == u'上证指数'
+	editOptional_page.fanhui_button.click()
+	#
+	#optional_page.cell001_staText.text == u'上证指数'
+	optional_page.bianji_button.click()
+	action1 = TouchAction(driver)
+	action1.press(editOptional_page.cell002_tuodong_btn).wait(100).move_to(editOptional_page.cell001_tuodong_btn).wait(100).release()
+	action1.perform()
+	action2 = TouchAction(driver)
+	action2.press(editOptional_page.cell003_tuodong_btn).wait(100).move_to(editOptional_page.cell001_tuodong_btn).wait(100).release()
+	action2.perform()
+	editOptional_page.fanhui_button.click()
+	#assert optional_page.cell001_staText.text == u'同花顺'
+
+	optional_page.bianji_button.click()
+	editOptional_page.cell001_btn.click()
+	editOptional_page.cell002_btn.click()
+	editOptional_page.cell003_btn.click()
+	editOptional_page.shanchu_button.click()
+	editOptional_page.fanhui_button.click()
+	sleep(2)
+
 
 
 """
