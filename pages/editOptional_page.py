@@ -30,6 +30,30 @@ class EditOptionalPage(PageObject):
 	cell002_tuodong_btn = page_element(xpath='//UIAApplication[1]/UIAWindow[1]/UIATableView[1]/UIATableCell[2]/UIAButton[4]')
 	cell003_tuodong_btn = page_element(xpath='//UIAApplication[1]/UIAWindow[1]/UIATableView[1]/UIATableCell[3]/UIAButton[4]')
 
+	def hx_upglide(self):
+		"""
+		在编辑自选界面进行上滑操作
+		:return:
+		"""
+		el1 = self.w.get_window_size()
+		width = el1.get('width')
+		height = el1.get('height')
+		start_x = width * (285 / 375.0)
+		start_y = height * (108 / 667.0)
+		end_x = width * (285 / 375.0)
+		end_y = height * (550 / 667.0)
+		self.w.swipe(start_x, start_y, end_x, end_y, duration=500)
+
+	def hx_glide(self):
+		el1 = self.w.get_window_size()
+		width = el1.get('width')
+		height = el1.get('height')
+		start_x = width * (285 / 375.0)
+		start_y = height * (550 / 667.0)
+		end_x = width * (285 / 375.0)
+		end_y = height * (108 / 667.0)
+		self.w.swipe(start_x, start_y, end_x, end_y, duration=500)
+
 
 
 

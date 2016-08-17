@@ -38,13 +38,13 @@ def test_step001(driver):
 def test_step005(driver):
 	public_page = PublicPage(driver)
 	optional_page = OptionalPage(driver)
-	addOpyional_page = AddOptionalPage(driver)
+	addOptional_page = AddOptionalPage(driver)
 	editOptional_page = EditOptionalPage(driver)
 	searchStock_page = SearchStockPage(driver)
 	fenshikxian_page = FenshiKxianPage(driver)
 
 	public_page.zixuan_button.click()
-
+	"""
 	optional_page.bianji_button.click()
 	editOptional_page.tianjiagupiao_button.click()
 
@@ -68,8 +68,8 @@ def test_step005(driver):
 	searchStock_page.hx_send_keys_with_addStock('0', '0', '0', '0', '1')
 	searchStock_page.hx_send_keys_with_addStock('h', 's', 'i')
 
-	addOpyional_page.fanhui_button.click()
-	driver.swipe(start_x=285, start_y=108, end_x=285, end_y=550, duration=500)
+	addOptional_page.fanhui_button.click()
+	editOptional_page.hx_upglide()
 	#assert editOptional_page.cell001_staText.text == u'现货白银'
 	editOptional_page.fanhui_button.click()
 	sleep(1)
@@ -78,13 +78,13 @@ def test_step005(driver):
 	public_page.shouye_button.click()
 	public_page.zixuan_button.click()
 	optional_page.bianji_button.click()
-	driver.swipe(start_x=285, start_y=548, end_x=285, end_y=117, duration=500)
+	editOptional_page.hx_upglide()
 	#置顶三次操作
 	editOptional_page.cell017_zhiding_btn.click()
 	editOptional_page.cell017_zhiding_btn.click()
 	editOptional_page.cell017_zhiding_btn.click()
 	# 第一条为上证指数
-	driver.swipe(start_x=285, start_y=108, end_x=285, end_y=550, duration=500)
+	editOptional_page.hx_glide()
 	assert editOptional_page.cell001_staText.text == u'上证指数'
 	editOptional_page.fanhui_button.click()
 	#
@@ -106,16 +106,18 @@ def test_step005(driver):
 	editOptional_page.shanchu_button.click()
 	editOptional_page.fanhui_button.click()
 	sleep(2)
-
+	"""
 	optional_page.sousuo_button.click()
 	searchStock_page.hx_send_keys('1','A','0','0','0','1')
-	SearchStockPage.zixuanadd_button.click()
+	searchStock_page.zixuanadd_button.click()
 	searchStock_page.qingchuwenben_button.click()
 	searchStock_page.hx_send_keys('3','9','9','0','0','6')
+	sleep(1)
 	fenshikxian_page.jiazixuan_staText.click()
 	fenshikxian_page.fanhui_button.click()
 	optional_page.sousuo_button.click()
 	searchStock_page.hx_send_keys('3', '0', '0', '0', '3', '3')
+	sleep(1)
 	fenshikxian_page.jiazixuan_staText.click()
 	fenshikxian_page.fanhui_button.click()
 
@@ -255,7 +257,7 @@ def test_step005(driver):
 	optional_page.hx_longPress(optional_page.cell017)
 	optional_page.zhiding_btn.click()
 	optional_page.quxiaopaixu_btn.click()
-	optional_page.hx_glide().click()
+	optional_page.hx_glide()
 	optional_page.hx_longPress(optional_page.cell001)
 	optional_page.shanchu_btn.click()
 	optional_page.hx_longPress(optional_page.cell001)
