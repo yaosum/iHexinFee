@@ -10,7 +10,7 @@ class OptionalPage(PageObject):
 	zixuan_staticText = page_element(xpath = "//UIAStaticText[@name='自选']")
 	sousuo_button = page_element(accessibility_id = "搜索")
 
-	zixuanIndexItemName_staText = page_element(xpath="//UIAApplication[1]/UIAWindow[1]/UIAStaticText[7]")
+	zixuanIndexItemName_staText = page_element(accessibility_id = 'ZixuanIndexItemName')
 	zijin_btn = page_element(accessibility_id = '资金')
 	xinwen_btn = page_element(accessibility_id = '新闻')
 	gonggao_btn = page_element(accessibility_id='公告')
@@ -33,6 +33,10 @@ class OptionalPage(PageObject):
 	weibi_staText = page_element(accessibility_id='委比')
 	zhenfu_staText = page_element(accessibility_id='振幅')
 
+	tongbuzixuangu_btn = page_element(accessibility_id='同步自选股')
+	duoshoujiPCtongbu_staText = page_element(accessibility_id='多手机，pc同步自选股')
+
+
 	quxiaopaixu_btn = page_element(accessibility_id="取消排序")
 
 	shanchu_btn = page_element(accessibility_id="删除")
@@ -41,6 +45,8 @@ class OptionalPage(PageObject):
 
 
 	cell001 = page_element(xpath='//UIAApplication[1]/UIAWindow[1]/UIATableView[1]/UIATableCell[1]')
+	cell002 = page_element(xpath='//UIAApplication[1]/UIAWindow[1]/UIATableView[1]/UIATableCell[2]')
+	cell003 = page_element(xpath='//UIAApplication[1]/UIAWindow[1]/UIATableView[1]/UIATableCell[3]')
 	cell017 = page_element(xpath='//UIAApplication[1]/UIAWindow[1]/UIATableView[1]/UIATableCell[17]')
 
 	cell001_staText = page_element(xpath='//UIAApplication[1]/UIAWindow[1]/UIATableView[1]/UIATableCell[1]/UIAStaticText[1]')

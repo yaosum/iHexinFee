@@ -31,14 +31,17 @@ def test_step001(driver):
 	assert home_page.gerenzhongxin_button
 	assert home_page.feivip_button
 	assert home_page.qiehuanyejianmoshi_button
-
-	PublicPage(driver).zixuan_button.click()
-	assert optional_page.zixuan_staticText.text == u'自选'
+	# step2
+	public_page.zixuan_button.click()
+	assert optional_page.zixuan_staticText
+	assert optional_page.tongbuzixuangu_btn
+	assert optional_page.duoshoujiPCtongbu_staText
+	# step3
 	optional_page.bianji_button.click()
-	assert bianjizixuan_page.bianjizixuan_StaticText.text == u'编辑自选'
+	assert bianjizixuan_page.bianjizixuan_StaticText
+	# step4
 	bianjizixuan_page.tianjiagupiao_button.click()
-	assert tianjiazixuan_page.tianjiazixuan_staticText.text == u'添加自选'
-
+	assert tianjiazixuan_page.tianjiazixuan_staticText
 
 def test_step005(driver):
 	public_page = PublicPage(driver)
@@ -49,12 +52,12 @@ def test_step005(driver):
 	fenshikxian_page = FenshiKxianPage(driver)
 
 	public_page.zixuan_button.click()
-
+	assert optional_page.cell001.text == u'上证指数'
+	assert optional_page.cell002.text == u'创业板指'
+	assert optional_page.cell003.text == u'同花顺'
 	optional_page.bianji_button.click()
 	bianjizixuan_page.tianjiagupiao_button.click()
-
 	sleep(1)
-
 	searchStock_page.hx_send_keys_with_addStock('6', '0', '0', '0', '0', '0')
 	searchStock_page.hx_send_keys_with_addStock('0', '0', '0', '0', '0', '1')
 	searchStock_page.hx_send_keys_with_addStock('9', '0', '0', '9', '0', '1')
