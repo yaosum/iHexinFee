@@ -95,11 +95,7 @@ class SearchStockPage(PageObject):
 		:param args: A sequence of elements for a keyboard.
 		:return:
 		"""
-		remain_args = None
-		if len(args) == 1:
-			remain_args = args[0]
-		else:
-			remain_args = args
+		remain_args = args
 		while remain_args:
 			is_number, taken_args, remain_args = SearchStockPage.hx_util_taken_same_type_args(remain_args)
 

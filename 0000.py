@@ -3,8 +3,8 @@
 from appium import webdriver
 
 from pages import searchStock_page
-from pages.addOptional_page import AddOptionalPage
-from pages.editOptional_page import EditOptionalPage
+from pages.tianjiazixuan_page import TianjiazixuanPage
+from pages.bianjizixuan_page import BianjizixuanPage
 from pages.fenshiKxian_page import FenshiKxianPage
 from pages.optional_page import OptionalPage
 from pages.public_page import PublicPage
@@ -15,20 +15,10 @@ from time import sleep
 def test_search(driver):
 	optional_page = OptionalPage(driver)
 	fenshikxian_page = FenshiKxianPage(driver)
-	SearchStockPage(driver)
-	PublicPage(driver).zixuan_button.click()
-	optional_page.sousuo_button.click()
-	searchStock_page.hx_send_keys('1', 'A', '0', '0', '0', '1')
-	SearchStockPage.zixuanadd_button.click()
-	searchStock_page.qingchuwenben_button.click()
-	searchStock_page.hx_send_keys('3', '9', '9', '0', '0', '6')
-	fenshikxian_page.jiazixuan_staText.click()
-	fenshikxian_page.fanhui_button.click()
-	optional_page.sousuo_button.click()
-	searchStock_page.hx_send_keys('3', '0', '0', '0', '3', '3')
-	fenshikxian_page.jiazixuan_staText.click()
-	fenshikxian_page.fanhui_button.click()
-
+	searchStock_page = SearchStockPage(driver)
+	HomePage(driver).sousuo_button.click()
+	sleep(2)
+	searchStock_page.hx_send_keys('60sc01')
 	pass
 
 

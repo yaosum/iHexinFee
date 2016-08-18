@@ -5,13 +5,13 @@ from page_object.appium_page_objects import PageObject, page_element
 
 class KanZhulizijinPage(PageObject):
 	fanhui_btn = page_element(xpath= '//UIAApplication[1]/UIAWindow[1]/UIANavigationBar[1]/UIAButton[1]')
-	kanzhulizijin_staticText = page_element(xpath= '//UIAApplication[1]/UIAWindow[1]/UIANavigationBar[1]/UIAStaticText[1]')
+	kanzhulizijin_staticText = page_element(xpath= "//UIAStaticText[@name= '看主力资金']")
 	gengduo_button = page_element(accessibility_id= '更多')
 	#closeTip_button = page_element()
 
 	denglu_btn = page_element(accessibility_id='登录')
 
-	zixuan_btn = page_element(xpath= '//UIAApplication[1]/UIAWindow[1]/UIAButton[3]')
+	zixuan_btn = page_element(xpath= "//UIAWindow[1]/UIAButton[@name='自选']")
 	hushen_btn = page_element(accessibility_id='沪深')
 	hangye_btn = page_element(accessibility_id='行业')
 	gainian_btn = page_element(accessibility_id='概念')

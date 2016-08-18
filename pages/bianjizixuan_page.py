@@ -3,9 +3,9 @@
 from page_object.appium_page_objects import PageObject, page_element
 
 
-class EditOptionalPage(PageObject):
+class BianjizixuanPage(PageObject):
 	fanhui_button = page_element(accessibility_id = "返回")
-	bianjizixuan_StaticText = page_element(xpath='//UIAApplication[1]/UIAWindow[1]/UIANavigationBar[1]/UIAStaticText[1]')
+	bianjizixuan_StaticText = page_element(xpath="//UIAStaticText[@name='编辑自选']")
 	tianjiagupiao_button = page_element(accessibility_id = "添加股票")
 
 	shanchu_button = page_element(xpath='//UIAApplication[1]/UIAWindow[1]/UIAButton[1]')
