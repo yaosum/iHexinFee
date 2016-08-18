@@ -179,79 +179,22 @@ def test_step005(driver):
 
 	optional_page.cell001.click()
 	sleep(1)
-	fenshikxian_page.xiayigegupiao_button.click
-	fenshikxian_page.xiayigegupiao_button.click
-	fenshikxian_page.xiayigegupiao_button.click
-	fenshikxian_page.xiayigegupiao_button.click
-	fenshikxian_page.xiayigegupiao_button.click
-	fenshikxian_page.xiayigegupiao_button.click
-	fenshikxian_page.xiayigegupiao_button.click
-	fenshikxian_page.xiayigegupiao_button.click
-	fenshikxian_page.xiayigegupiao_button.click
-	fenshikxian_page.xiayigegupiao_button.click
-	fenshikxian_page.xiayigegupiao_button.click
-	fenshikxian_page.xiayigegupiao_button.click
-	fenshikxian_page.xiayigegupiao_button.click
-	fenshikxian_page.xiayigegupiao_button.click
-	fenshikxian_page.xiayigegupiao_button.click
-	fenshikxian_page.xiayigegupiao_button.click
-	fenshikxian_page.xiayigegupiao_button.click
+	for n in range(17):
+		fenshikxian_page.xiayigegupiao_button.click
 
-	fenshikxian_page.shangyigegupiao_button.click()
-	fenshikxian_page.shangyigegupiao_button.click()
-	fenshikxian_page.shangyigegupiao_button.click()
-	fenshikxian_page.shangyigegupiao_button.click()
-	fenshikxian_page.shangyigegupiao_button.click()
-	fenshikxian_page.shangyigegupiao_button.click()
-	fenshikxian_page.shangyigegupiao_button.click()
-	fenshikxian_page.shangyigegupiao_button.click()
-	fenshikxian_page.shangyigegupiao_button.click()
-	fenshikxian_page.shangyigegupiao_button.click()
-	fenshikxian_page.shangyigegupiao_button.click()
-	fenshikxian_page.shangyigegupiao_button.click()
-	fenshikxian_page.shangyigegupiao_button.click()
-	fenshikxian_page.shangyigegupiao_button.click()
-	fenshikxian_page.shangyigegupiao_button.click()
-	fenshikxian_page.shangyigegupiao_button.click()
-	fenshikxian_page.shangyigegupiao_button.click()
+	for n in range(17):
+		fenshikxian_page.shangyigegupiao_button.click()
+
+
 
 	fenshikxian_page.hx_left()
 
-	fenshikxian_page.xiayigegupiao_button.click
-	fenshikxian_page.xiayigegupiao_button.click
-	fenshikxian_page.xiayigegupiao_button.click
-	fenshikxian_page.xiayigegupiao_button.click
-	fenshikxian_page.xiayigegupiao_button.click
-	fenshikxian_page.xiayigegupiao_button.click
-	fenshikxian_page.xiayigegupiao_button.click
-	fenshikxian_page.xiayigegupiao_button.click
-	fenshikxian_page.xiayigegupiao_button.click
-	fenshikxian_page.xiayigegupiao_button.click
-	fenshikxian_page.xiayigegupiao_button.click
-	fenshikxian_page.xiayigegupiao_button.click
-	fenshikxian_page.xiayigegupiao_button.click
-	fenshikxian_page.xiayigegupiao_button.click
-	fenshikxian_page.xiayigegupiao_button.click
-	fenshikxian_page.xiayigegupiao_button.click
-	fenshikxian_page.xiayigegupiao_button.click
+	for n in range(17):
+		fenshikxian_page.xiayigegupiao_button.click
 
-	fenshikxian_page.shangyigegupiao_button.click()
-	fenshikxian_page.shangyigegupiao_button.click()
-	fenshikxian_page.shangyigegupiao_button.click()
-	fenshikxian_page.shangyigegupiao_button.click()
-	fenshikxian_page.shangyigegupiao_button.click()
-	fenshikxian_page.shangyigegupiao_button.click()
-	fenshikxian_page.shangyigegupiao_button.click()
-	fenshikxian_page.shangyigegupiao_button.click()
-	fenshikxian_page.shangyigegupiao_button.click()
-	fenshikxian_page.shangyigegupiao_button.click()
-	fenshikxian_page.shangyigegupiao_button.click()
-	fenshikxian_page.shangyigegupiao_button.click()
-	fenshikxian_page.shangyigegupiao_button.click()
-	fenshikxian_page.shangyigegupiao_button.click()
-	fenshikxian_page.shangyigegupiao_button.click()
-	fenshikxian_page.shangyigegupiao_button.click()
-	fenshikxian_page.shangyigegupiao_button.click()
+	for n in range(17):
+		fenshikxian_page.shangyigegupiao_button.click()
+
 
 	fenshikxian_page.fanhui_button.click()
 
