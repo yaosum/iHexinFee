@@ -26,15 +26,7 @@ def test_search(driver):
 	optional_page.bianji_button.click()
 	bianjizixuan_page.hx_upglide()
 	sleep(1)
-	# 置顶三次操作
-	for n in range(3):
-		print n
-		bianjizixuan_page.cell017_zhiding_btn.click()
-		sleep(1)
-	# 第一条为上证指数
-	bianjizixuan_page.hx_glide()
-	sleep(1)
-	assert bianjizixuan_page.cell001_stock_staText.text == u'上证指数'
+	print len()
 
 
 if __name__ == '__main__':

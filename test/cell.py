@@ -25,15 +25,16 @@ class TestOptional(unittest.TestCase):
 
         self.driver = webdriver.Remote('http://localhost:4723/wd/hub', desired_caps)
 
-    def tearDown(self):
-        self.driver.quit()
+    #def tearDown(self):
+        #self.driver.quit()
 
 
     def test_001(self):
 		self.driver.find_element_by_accessibility_id("自选").click()
-		print self.driver.find_element_by_xpath("//UIAStaticText[@name='沪']").is_displayed()
-		sleep(2)
-		self.driver.drag_and_drop()
+		self.driver.find_element_by_accessibility_id("编辑").click()
+		#print len(self.driver.find_element_by_xpath("//UIATableCell[@name]"))
+		print len(self.driver.find_elements_by_xpath("//UIATableCell[@name]"))
+
 
 
 		sleep(2)

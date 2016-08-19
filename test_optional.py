@@ -101,6 +101,7 @@ def test_step005(driver):
 	sleep(1)
 	assert bianjizixuan_page.cell001_stock_staText.text == u'上证指数'
 	bianjizixuan_page.fanhui_button.click()
+	optional_page.hx_glide()
 	sleep(1)
 	assert optional_page.cell001_stock_staText.text == u'上证指数'
 	# step18
@@ -225,8 +226,12 @@ def test_step005(driver):
 	optional_page.quxiaopaixu_btn.click()
 
 	# step99
-	assert optional_page.cell001_stock_staText.text == u'同花顺'
-	optional_page.cell001.click()
+	optional_page.hx_glide()
+	optional_page.hx_upglide()
+	sleep(1)
+	#assert optional_page.cell001_stock_staText.text == u'同花顺'
+	#optional_page.cell001.click()
+	optional_page.THS_stock_staText.click()
 	sleep(1)
 	# step100
 	for n in range(17):

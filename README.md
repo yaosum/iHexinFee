@@ -84,6 +84,10 @@ xpath查找元素的问题
 ```
 self.driver.find_element_by_xpath("//UIAStaticText[@name='同花顺']").click()
 ```
+计算cell数量
+```
+print len(self.driver.find_elements_by_xpath("//UIATableCell[@name]"))
+```
 拖动
 ```
     def drag_and_drop(self, origin_el, destination_el):
