@@ -1,5 +1,2 @@
-lists=['1','2','3','4']
-
-for	list in lists:
-
-	print "test'%d'",list
+for n in range(3):
+	print "1"

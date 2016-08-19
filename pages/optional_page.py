@@ -21,7 +21,7 @@ class OptionalPage(PageObject):
 	zhangdie_staText = page_element(accessibility_id="涨跌")
 	zhangsu_staText = page_element(accessibility_id="涨速")
 	zongshou_staText = page_element(accessibility_id="总手")
-	huanshopu_staText = page_element(accessibility_id="换手")
+	huanshou_staText = page_element(accessibility_id="换手")
 	liangbi_staText = page_element(accessibility_id='量比')
 	shiyingdong_staText = page_element(accessibility_id='市盈(动)')
 	shijinglv_staText = page_element(accessibility_id='市净率')
@@ -43,13 +43,33 @@ class OptionalPage(PageObject):
 	zhiding_btn = page_element(accessibility_id="置顶")
 	zhidi_btn = page_element(accessibility_id="置底")
 
+	THS_stock_staText = page_element(xpath="//UIAStaticText[@name='同花顺']")
+	SZZS_stock_staText = page_element(xpath="//UIAStaticText[@name='上证指数']")
+	CYBZ_stock_staText = page_element(xpath="//UIAStaticText[@name='创业扳指']")
+	PFYH_stock_staText = page_element(xpath="//UIAStaticText[@name='浦发银行']")
+	PAYH_stock_staText = page_element(xpath="//UIAStaticText[@name='平安银行']")
+	YSBG_stock_staText = page_element(xpath="//UIAStaticText[@name='云赛Ｂ股']")
+	SWYB_stock_staText = page_element(xpath="//UIAStaticText[@name='深物业B']")
+	GZ217_stock_staText = page_element(xpath="//UIAStaticText[@name='21国债⑺']")
+	GZ0213_stock_staText = page_element(xpath="//UIAStaticText[@name='国债0213']")
+	JJYF_stock_staText = page_element(xpath="//UIAStaticText[@name='基金银丰']")
+	RHXK_stock_staText = page_element(xpath="//UIAStaticText[@name='瑞和小康']")
+	CB5_stock_staText = page_element(xpath="//UIAStaticText[@name='长白5']")
+	SZCZ_stock_staText = page_element(xpath="//UIAStaticText[@name='深证成指']")
+	DQS_stock_staText = page_element(xpath="//UIAStaticText[@name='道琼斯']")
+	BD_stock_staText = page_element(xpath="//UIAStaticText[@name='百度']")
+	ETF50_stock_staText = page_element(xpath="//UIAStaticText[@name='50ETF']")
+	XHBY_stock_staText = page_element(xpath="//UIAStaticText[@name='现货白银']")
+
 
 	cell001 = page_element(xpath='//UIAApplication[1]/UIAWindow[1]/UIATableView[1]/UIATableCell[1]')
 	cell002 = page_element(xpath='//UIAApplication[1]/UIAWindow[1]/UIATableView[1]/UIATableCell[2]')
 	cell003 = page_element(xpath='//UIAApplication[1]/UIAWindow[1]/UIATableView[1]/UIATableCell[3]')
 	cell017 = page_element(xpath='//UIAApplication[1]/UIAWindow[1]/UIATableView[1]/UIATableCell[17]')
 
-	cell001_staText = page_element(xpath='//UIAApplication[1]/UIAWindow[1]/UIATableView[1]/UIATableCell[1]/UIAStaticText[1]')
+	cell001_stock_staText = page_element(xpath='//UIAApplication[1]/UIAWindow[1]/UIATableView[1]/UIATableCell[1]/UIAStaticText[1]')
+	cell002_stock_staText = page_element(xpath='//UIAApplication[1]/UIAWindow[1]/UIATableView[1]/UIATableCell[2]/UIAStaticText[1]')
+	cell003_stock_staText = page_element(xpath='//UIAApplication[1]/UIAWindow[1]/UIATableView[1]/UIATableCell[3]/UIAStaticText[1]')
 
 	def hx_upglide(self):
 		# 基于iPhone6 375/667

@@ -10,6 +10,9 @@ class FenshiKxianPage(PageObject):
 
 	jiazixuan_staText = page_element(accessibility_id='加自选')
 
+	shezhi_btn = page_element(accessibility_id='设置')
+	klineTabButton = page_element(accessibility_id='KlineTabButtonBackground')
+
 	def hx_right(self):
 		el1 = self.w.get_window_size()
 		width = el1.get('width')

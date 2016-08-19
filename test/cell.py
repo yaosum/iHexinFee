@@ -33,6 +33,7 @@ class TestOptional(unittest.TestCase):
 		self.driver.find_element_by_accessibility_id("自选").click()
 		print self.driver.find_element_by_xpath("//UIAStaticText[@name='沪']").is_displayed()
 		sleep(2)
+		self.driver.drag_and_drop()
 
 
 		sleep(2)
