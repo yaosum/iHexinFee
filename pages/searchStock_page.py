@@ -141,6 +141,9 @@ class SearchStockPage(PageObject):
 			pass
 		self.qingchuwenben_button.click()
 
+	def hx_addStock(self, stockName):
+		self.stockName.click()
+
 
 
 
