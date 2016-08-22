@@ -23,11 +23,13 @@ def test_search(driver):
 	home_page = HomePage(driver)
 
 	public_page.zixuan_button.click()
-	optional_page.bianji_button.click()
-	bianjizixuan_page.hx_upglide()
-	sleep(1)
-	print len()
+	# step99
+	optional_page.hx_glide()
 
+	sleep(1)
+	# assert optional_page.cell001_stock_staText.text == u'同花顺'
+	# optional_page.cell001.click()
+	optional_page.THS_stock_staText.click()
 
 if __name__ == '__main__':
 	# equals to setUp

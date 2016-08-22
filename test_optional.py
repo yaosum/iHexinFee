@@ -227,7 +227,6 @@ def test_step005(driver):
 
 	# step99
 	optional_page.hx_glide()
-	optional_page.hx_upglide()
 	sleep(1)
 	#assert optional_page.cell001_stock_staText.text == u'同花顺'
 	#optional_page.cell001.click()

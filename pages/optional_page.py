@@ -61,6 +61,8 @@ class OptionalPage(PageObject):
 	ETF50_stock_staText = page_element(xpath="//UIAStaticText[@name='50ETF']")
 	XHBY_stock_staText = page_element(xpath="//UIAStaticText[@name='现货白银']")
 
+	THS_cell = page_element(xpath="//UIATableView[1]/UIATableCell[@name='同花顺']")
+
 
 	cell001 = page_element(xpath='//UIAApplication[1]/UIAWindow[1]/UIATableView[1]/UIATableCell[1]')
 	cell002 = page_element(xpath='//UIAApplication[1]/UIAWindow[1]/UIATableView[1]/UIATableCell[2]')
