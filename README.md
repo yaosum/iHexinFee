@@ -117,7 +117,7 @@ print len(self.driver.find_elements_by_xpath("//UIATableCell[@name]"))
 1. 页面:对于有一个新page生成需创建一个新page,优先使用标题栏命名,若标题会改变则根据页面功能进行命名
 2. 元素:数字开头的元素统一将数字放在末尾
 
-### 三种等待时间的设置方法
+### [三种等待时间的设置方法](https://testerhome.com/topics/2576#reply17)
 - 第一种 sleep()： 设置固定休眠时间。 python 的 time 包提供了休眠方法 sleep() ， 导入 time包后就可以使用 sleep()进行脚本的执行过程进行休眠。
 导入 time 包
 ```
