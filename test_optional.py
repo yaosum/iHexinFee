@@ -20,7 +20,7 @@ from pages.zixuanguxinwen_page import ZixuanguxinwenPage
 from pages.zixun_page import ZixunPage
 
 
-
+"""
 def test_step001(driver):
 	home_page = HomePage(driver)
 	optional_page = OptionalPage(driver)
@@ -42,7 +42,7 @@ def test_step001(driver):
 	# step4
 	bianjizixuan_page.tianjiagupiao_button.click()
 	assert tianjiazixuan_page.tianjiazixuan_staticText
-
+"""
 def test_step005(driver):
 	public_page = PublicPage(driver)
 	optional_page = OptionalPage(driver)
@@ -53,6 +53,7 @@ def test_step005(driver):
 
 	# step5-10
 	public_page.zixuan_button.click()
+	"""
 	assert optional_page.cell001_stock_staText.text == u'上证指数'
 	assert optional_page.cell002_stock_staText.text == u'创业板指'
 	assert optional_page.cell003_stock_staText.text == u'同花顺'
@@ -60,16 +61,22 @@ def test_step005(driver):
 	bianjizixuan_page.tianjiagupiao_button.click()
 	sleep(1)
 	# 添加股票
-	stockCodes = ['600000', '000001', '900901', '200011', '010107',
-	              '100213', '500058', '150008', '400002', '399001',
-	              'dji', 'BIDU', '510050', 'TJAG00','00001',
-	              'hsi']
-	for stockCode in stockCodes:
-		print stockCode
-		searchStock_page.hx_send_keys_with_addStock(stockCode)
+	stocks = [('600000','addPFYH_btn'), ('000001','addPAYH_btn'), ('900901','addYSBG_btn'), ('200011','addSWYB_btn'), ('010107','add21GZ_btn'),
+	              ('100213','addGZ0213_btn'), ('500058','addJJYF_btn'), ('150008','addRHXK_btn'), ('400002','addCB5_btn'), ('399001','addSZCZ_btn'),
+	              ('dji','addDQS_btn'), ('BIDU','addBD_btn'), ('510050','add50ETF_btn'), ('TJAG00','addXHBY_btn'), ('00001','addCH_btn'),
+	              ('hsi','addHSZS_btn')]
+	for stockCode,stockName in stocks:
+		print stockCode,stockName
+		searchStock_page.hx_send_keys(stockCode)
+		try:
+			eval('tianjiazixuan_page.{}.click()'.format(stockName))
+		except:
+			print '该股票已添加过'
+		tianjiazixuan_page.qingchuwenben_button.click()
 	# step11
 	tianjiazixuan_page.fanhui_button.click()
 	bianjizixuan_page.fanhui_button.click()
+	"""
 	optional_page.bianji_button.click()
 	bianjizixuan_page.hx_upglide()
 	assert bianjizixuan_page.cell001_stock_staText.text == u'现货白银'

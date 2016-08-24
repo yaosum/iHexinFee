@@ -21,15 +21,21 @@ def test_search(driver):
 	bianjizixuan_page = BianjizixuanPage(driver)
 	public_page = PublicPage(driver)
 	home_page = HomePage(driver)
+	tianjiazixuan_page = TianjiazixuanPage(driver)
 
 	public_page.zixuan_button.click()
-	# step99
-	optional_page.hx_glide()
-
+	optional_page.bianji_button.click()
+	bianjizixuan_page.tianjiagupiao_button.click()
 	sleep(1)
-	# assert optional_page.cell001_stock_staText.text == u'同花顺'
-	# optional_page.cell001.click()
-	optional_page.THS_stock_staText.click()
+	stockCodes = [('600000', 'addPFYH_btn'), ('000001','addPAYH_btn')]
+	#stockNames = ['','addPAYH_btn']
+	for stockCode, stockName in stockCodes:
+		searchStock_page.hx_send_keys(stockCode)
+		try:
+			eval('tianjiazixuan_page.{}.click()'.format(stockName))
+		except:
+			print '该股票已添加过'
+		tianjiazixuan_page.qingchuwenben_button.click()
 
 if __name__ == '__main__':
 	# equals to setUp
