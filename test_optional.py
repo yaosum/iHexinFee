@@ -20,7 +20,7 @@ from pages.zixuanguxinwen_page import ZixuanguxinwenPage
 from pages.zixun_page import ZixunPage
 
 
-"""
+
 def test_step001(driver):
 	home_page = HomePage(driver)
 	optional_page = OptionalPage(driver)
@@ -53,7 +53,6 @@ def test_step005(driver):
 
 	# step5-10
 	public_page.zixuan_button.click()
-	"""
 	assert optional_page.cell001_stock_staText.text == u'上证指数'
 	assert optional_page.cell002_stock_staText.text == u'创业板指'
 	assert optional_page.cell003_stock_staText.text == u'同花顺'
@@ -76,7 +75,6 @@ def test_step005(driver):
 	# step11
 	tianjiazixuan_page.fanhui_button.click()
 	bianjizixuan_page.fanhui_button.click()
-	"""
 	optional_page.bianji_button.click()
 	bianjizixuan_page.hx_upglide()
 	assert bianjizixuan_page.cell001_stock_staText.text == u'现货白银'
@@ -274,8 +272,8 @@ def test_step005(driver):
 	optional_page.shanchu_btn.click()
 	optional_page.hx_longPress(optional_page.cell001)
 	optional_page.shanchu_btn.click()
-
 """
+
 def test_step031(driver):
 	public_page = PublicPage(driver)
 	optional_page = OptionalPage(driver)
@@ -290,6 +288,7 @@ def test_step031(driver):
 	driver.swipe(start_x=300, start_y=239, end_x=39, end_y=239, duration=500)
 	zixuanDapan_page.shen_btn.click()
 	zixuanDapan_page.hu_btn.click()
+
 	driver.swipe(start_x=39, start_y=239, end_x=300, end_y=239, duration=500)
 	driver.execute_script("mobile: tap", {"tapCount": 1, "touchCount": 1, "duration": 0.5, "x": 188, "y": 480})
 	optional_page.zixuanIndexItemName_staText.click()
@@ -392,4 +391,3 @@ def test_step88(driver):
 	public_page.zixuan_button.click()
 	optional_page.zichan_btn.click()
 	wodezichan_page.fanhui_btn.click()
-"""
