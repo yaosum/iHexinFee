@@ -104,7 +104,7 @@ def pytest_runtest_makereport(item, call):
     report = outcome.get_result()
     summary = []
     extra = getattr(report, 'extra', [])
-    driver = getattr(item.session, '_driver', None)
+    driver = getattr(item, '_driver', None)
     failure = report.failed
 
 
