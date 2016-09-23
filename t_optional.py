@@ -1,24 +1,20 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-from time import sleep
 
-from appium.webdriver.common.touch_action import TouchAction
-
-from pages.tianjiazixuan_page import TianjiazixuanPage
-from pages.denglu_page import DengluPage
-from pages.bianjizixuan_page import BianjizixuanPage
-from pages.fenshiKxian_page import FenshiKxianPage
-from pages.home_page import HomePage
-from pages.zixuanDapan_page import ZixuanDapanPage
-from pages.kanZhulizijin_page import KanZhulizijinPage
-from pages.optional_page import OptionalPage
-from pages.public_page import PublicPage
-from pages.searchStock_page import SearchStockPage
-from pages.wodezichan_page import WodezichanPage
-from pages.zixuangugonggao_page import ZixuangugonggaoPage
-from pages.zixuanguxinwen_page import ZixuanguxinwenPage
-from pages.zixun_page import ZixunPage
-
+from pages.fenshikxian.fenshiKxian_page import FenshiKxianPage
+from pages.public.denglu_page import DengluPage
+from pages.public.public_page import PublicPage
+from pages.public.searchStock_page import SearchStockPage
+from pages.shouye.home_page import HomePage
+from pages.zixuangu.bianjizixuan_page import BianjizixuanPage
+from pages.zixuangu.kanZhulizijin_page import KanZhulizijinPage
+from pages.zixuangu.optional_page import OptionalPage
+from pages.zixuangu.tianjiazixuan_page import TianjiazixuanPage
+from pages.zixuangu.wodezichan_page import WodezichanPage
+from pages.zixuangu.zixuanDapan_page import ZixuanDapanPage
+from pages.zixuangu.zixuangugonggao_page import ZixuangugonggaoPage
+from pages.zixuangu.zixuanguxinwen_page import ZixuanguxinwenPage
+from pages.zixuangu.zixun_page import ZixunPage
 
 
 def test_step001(driver):

@@ -1,18 +1,17 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-from appium import webdriver
-from appium.webdriver.common.touch_action import TouchAction
-
-from pages import searchStock_page
-from pages.tianjiazixuan_page import TianjiazixuanPage
-from pages.bianjizixuan_page import BianjizixuanPage
-from pages.fenshiKxian_page import FenshiKxianPage
-from pages.optional_page import OptionalPage
-from pages.public_page import PublicPage
-from pages.searchStock_page import SearchStockPage
-from pages.home_page import HomePage
 from time import sleep
+
+from appium import webdriver
+
+from pages.fenshikxian.fenshiKxian_page import FenshiKxianPage
+from pages.public.public_page import PublicPage
+from pages.public.searchStock_page import SearchStockPage
+from pages.shouye.home_page import HomePage
+from pages.zixuangu.bianjizixuan_page import BianjizixuanPage
+from pages.zixuangu.optional_page import OptionalPage
+from pages.zixuangu.tianjiazixuan_page import TianjiazixuanPage
 
 def test_search(driver):
 	optional_page = OptionalPage(driver)

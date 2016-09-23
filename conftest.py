@@ -42,7 +42,6 @@ def pytest_addoption(parser):
     parser.addoption("--device_udid", help = "udid of device")
     parser.addoption("--bundle_id", help = "bundleId of application")
     parser.addoption("--app_path", help="path of app file")
-    parser.addoption("--auto_acceptAlerts", help="auto accept alerts", required=True)
 
 
 @pytest.fixture(scope = 'session')
@@ -69,13 +68,9 @@ def bundle_id(request):
 def app_path(request):
     return request.config.getoption('app_path')
 
-@pytest.fixture(scope = 'session')
-def auto_acceptAlerts(request):
-    return request.config.getoption('auto_acceptAlerts')
-
 
 @pytest.fixture(scope = 'function')
-def driver(request, platform_name, platform_version, device_name, device_udid, bundle_id, app_path, auto_acceptAlerts):
+def driver(request, platform_name, platform_version, device_name, device_udid, bundle_id, app_path):
     # equals to setUp
     desired_caps = {}
     # basic settings
@@ -87,8 +82,7 @@ def driver(request, platform_name, platform_version, device_name, device_udid, b
     desired_caps['bundleId'] = bundle_id
     # instruments for app
     desired_caps['app'] = app_path
-    # 弹窗处理
-    desired_caps['autoAcceptAlerts'] = auto_acceptAlerts
+
 
     driver = webdriver.Remote('http://localhost:4723/wd/hub', desired_caps)
 

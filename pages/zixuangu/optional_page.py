@@ -6,7 +6,8 @@ __author__ = "Hemin Won"
 
 class OptionalPage(PageObject):
 	# navigation bar
-	bianji_button = page_element(accessibility_id = "编辑")
+	#bianji_button = page_element(accessibility_id = "编辑")
+	bianji_button = page_element(xpath="//UIAApplication[1]/UIAWindow[1]/UIAButton[21]")
 	zixuan_staticText = page_element(xpath = "//UIAStaticText[@name='自选']")
 	sousuo_button = page_element(accessibility_id = "搜索")
 
@@ -63,11 +64,12 @@ class OptionalPage(PageObject):
 
 	THS_cell = page_element(xpath="//UIATableView[1]/UIATableCell[@name='同花顺']")
 
-
+	fenzu_btn = page_element(xpath = "//UIAApplication[1]/UIAWindow[1]/UIANavigationBar[1]/UIAButton[1]")
 	cell001 = page_element(xpath='//UIAApplication[1]/UIAWindow[1]/UIATableView[1]/UIATableCell[1]')
 	cell002 = page_element(xpath='//UIAApplication[1]/UIAWindow[1]/UIATableView[1]/UIATableCell[2]')
 	cell003 = page_element(xpath='//UIAApplication[1]/UIAWindow[1]/UIATableView[1]/UIATableCell[3]')
 	cell017 = page_element(xpath='//UIAApplication[1]/UIAWindow[1]/UIATableView[1]/UIATableCell[17]')
+	cell05 = page_element(xpath='//UIAApplication[1]/UIAWindow[1]/UIATableView[1]/UIATableCell[5]')
 
 	cell001_stock_staText = page_element(xpath='//UIAApplication[1]/UIAWindow[1]/UIATableView[1]/UIATableCell[1]/UIAStaticText[1]')
 	cell002_stock_staText = page_element(xpath='//UIAApplication[1]/UIAWindow[1]/UIATableView[1]/UIATableCell[2]/UIAStaticText[1]')
@@ -123,3 +125,24 @@ class OptionalPage(PageObject):
 		y = el_size['height'] / 2.0 + location['y']
 
 		return self.w.tap([(x, y)], duration=0.5)
+
+	# 从自选股页面滑动到分组页面
+	def zx_left(self):
+		el1 = self.w.get_window_size()
+		width = el1.get('width')
+		height = el1.get('height')
+		start_x = width * (365 / 375.0)
+		start_y = height * (466 / 667.0)
+		end_x = width * (200 / 375.0)
+		end_y = height * (466 / 667.0)
+		self.w.swipe(start_x, start_y, end_x, end_y, duration=500)
+	#从分组页面滑到自选股页面
+	def zx_right(self):
+		el1 = self.w.get_window_size()
+		width = el1.get('width')
+		height = el1.get('height')
+		start_x = width * (10 / 375.0)
+		start_y = height * (466 / 667.0)
+		end_x = width * (200 / 375.0)
+		end_y = height * (466 / 667.0)
+		self.w.swipe(start_x, start_y, end_x, end_y, duration=500)

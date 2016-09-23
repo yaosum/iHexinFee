@@ -5,6 +5,7 @@ from page_object.appium_page_objects import PageObject, page_element
 
 class KanZhulizijinPage(PageObject):
 	fanhui_btn = page_element(xpath= '//UIAApplication[1]/UIAWindow[1]/UIANavigationBar[1]/UIAButton[1]')
+	cell001 = page_element(xpath="//UIAApplication[1]/UIAWindow[1]/UIATableView[1]/UIATableCell[1]")
 	kanzhulizijin_staticText = page_element(xpath= "//UIAStaticText[@name= '看主力资金']")
 	gengduo_button = page_element(accessibility_id= '更多')
 	#closeTip_button = page_element()
@@ -16,6 +17,7 @@ class KanZhulizijinPage(PageObject):
 	hangye_btn = page_element(accessibility_id='行业')
 	gainian_btn = page_element(accessibility_id='概念')
 
+	zixuangushunxu_btn = page_element(accessibility_id='自选股顺序')
 	zuixin_staText = page_element(accessibility_id='最新')
 	dadanjingliang_staText = page_element(accessibility_id='大单净量')
 	zhangfu_staText = page_element(accessibility_id='涨幅')
@@ -106,3 +108,44 @@ class KanZhulizijinPage(PageObject):
 		assert self.desc_img
 		self.jine_staText.click()
 		assert self.asc_img
+
+	def hx_upglide(self):
+		# 基于iPhone6 375/667
+		el1 = self.w.get_window_size()
+		width = el1.get('width')
+		height = el1.get('height')
+		start_x = width * (304 / 375.0)
+		start_y = height * (598 / 667.0)
+		end_x = width * (304 / 375.0)
+		end_y = height * (154 / 667.0)
+		self.w.swipe(start_x, start_y, end_x, end_y, duration=500)
+
+	def hx_glide(self):
+		el1 = self.w.get_window_size()
+		width = el1.get('width')
+		height = el1.get('height')
+		start_x = width * (304 / 375.0)
+		start_y = height * (154 / 667.0)
+		end_x = width * (304 / 375.0)
+		end_y = height * (598/667.0)
+		self.w.swipe(start_x, start_y, end_x, end_y, duration=500)
+
+	def hx_left(self):
+		el1 = self.w.get_window_size()
+		width = el1.get('width')
+		height = el1.get('height')
+		start_x = width * (359 / 375.0)
+		start_y = height * (466 / 667.0)
+		end_x = width * (142 / 375.0)
+		end_y = height * (466 / 667.0)
+		self.w.swipe(start_x, start_y, end_x, end_y, duration=500)
+
+	def hx_right(self):
+		el1 = self.w.get_window_size()
+		width = el1.get('width')
+		height = el1.get('height')
+		start_x = width * (142 / 375.0)
+		start_y = height * (466 / 667.0)
+		end_x = width * (359 / 375.0)
+		end_y = height * (466 / 667.0)
+		self.w.swipe(start_x, start_y, end_x, end_y, duration=500)

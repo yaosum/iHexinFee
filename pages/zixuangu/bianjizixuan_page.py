@@ -27,7 +27,7 @@ class BianjizixuanPage(PageObject):
 	cell017_stock_staText = page_element(xpath="//UIAApplication[1]/UIAWindow[1]/UIATableView[1]/UIATableCell[17]/UIAStaticText[1]")
 
 	cell017_zhiding_btn = page_element(xpath='//UIAApplication[1]/UIAWindow[1]/UIATableView[1]/UIATableCell[17]/UIAButton[2]')
-
+	cell010_zhiding_btn = page_element(xpath='//UIAApplication[1]/UIAWindow[1]/UIATableView[1]/UIATableCell[10]/UIAButton[2]')
 	cell001_tuodong_btn = page_element(xpath='//UIAApplication[1]/UIAWindow[1]/UIATableView[1]/UIATableCell[1]/UIAButton[4]')
 	cell002_tuodong_btn = page_element(xpath='//UIAApplication[1]/UIAWindow[1]/UIATableView[1]/UIATableCell[2]/UIAButton[4]')
 	cell003_tuodong_btn = page_element(xpath='//UIAApplication[1]/UIAWindow[1]/UIATableView[1]/UIATableCell[3]/UIAButton[4]')
@@ -60,7 +60,6 @@ class BianjizixuanPage(PageObject):
 		action1 = TouchAction(self)
 		action1.press(origin_el).wait(100).move_to(destination_el).wait(100).release()
 		action1.perform()
-
 
 
 
